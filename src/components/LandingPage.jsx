@@ -128,7 +128,7 @@ export const LandingPage = () => {
     <div className="flex justify-between items-center py-5 md:py-6">
       {/* Brand with logo */}
       <a href="/" aria-label="Minus 80 Scientific — Home" className="flex items-center gap-3">
-        {/* Use your tighter crop if you have it in /public/logo-tight.png; otherwise keep /logo.png */}
+        
         <img
           src="/logo-tight.png"
           alt="Minus 80 Scientific logo"
@@ -208,7 +208,7 @@ export const LandingPage = () => {
             <<div className="relative">
   <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 p-8 flex items-center justify-center">
     <img
-      src="/logo.png"          // use /logo-tight.png if you saved the tighter crop
+      src="/logo-tight.png"          
       alt="Minus 80 Scientific logo"
       className="h-40 sm:h-48 md:h-56 lg:h-64 w-auto drop-shadow-lg"
       fetchpriority="high"
