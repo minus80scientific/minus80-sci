@@ -205,14 +205,17 @@ export const LandingPage = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 p-8 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <Snowflake className="w-24 h-24 text-white mx-auto animate-pulse" />
-                  <p className="text-white/80">Ultra-Low Temperature Systems</p>
-                  <p className="text-4xl font-bold text-white">-80°C</p>
-                </div>
-              </div>
+            <<div className="relative">
+  <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 p-8 flex items-center justify-center">
+    <img
+      src="/logo.png"          // use /logo-tight.png if you saved the tighter crop
+      alt="Minus 80 Scientific logo"
+      className="h-40 sm:h-48 md:h-56 lg:h-64 w-auto drop-shadow-lg"
+      fetchpriority="high"
+    />
+  </div>
+</div>
+
             </div>
           </div>
         </div>
