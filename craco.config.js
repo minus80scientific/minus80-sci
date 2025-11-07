@@ -5,6 +5,8 @@ const path = require('path');
 const config = {
   disableHotReload: process.env.DISABLE_HOT_RELOAD === 'true',
 };
+// minimal CRACO config (keep if you use Tailwind/PostCSS aliases later)
+module.exports = {};
 
 module.exports = {
   webpack: {
