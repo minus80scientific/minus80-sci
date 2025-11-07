@@ -1,3 +1,4 @@
+import { SITE } from "../config.site";
 import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -131,7 +132,7 @@ export const LandingPage = () => {
               <a href="#services" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Services</a>
               <a href="#about" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">About</a>
               <a href="#contact" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Contact</a>
-              <a href="tel:+12147291484">
+              <a href="tel:+12144278733">
                 <Button className="bg-[#1B8BB4] hover:bg-[#156A89] text-white">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
@@ -174,14 +175,14 @@ export const LandingPage = () => {
                   Get Emergency Service
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <a href="tel:+12147291484">
+                <a href="tel:+12144278733">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-[#1B8BB4] text-lg px-8 py-4 h-auto"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    214-729-1484
+                    214-427-8733
                   </Button>
                 </a>
               </div>
@@ -313,7 +314,7 @@ export const LandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5" />
-                      <span>214-729-1484</span>
+                      <span>214-427-8733</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5" />
@@ -412,7 +413,7 @@ export const LandingPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">24/7 Emergency Hotline</div>
-                    <div className="text-cyan-200">214-729-1484</div>
+                    <div className="text-cyan-200">214-427-8733</div>
                   </div>
                 </div>
 
@@ -495,7 +496,7 @@ export const LandingPage = () => {
                         type="tel"
                         required
                         className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-                        placeholder="(214) 123-4567"
+                        placeholder="(214) 427-8733"
                       />
                     </div>
                   </div>
@@ -560,7 +561,7 @@ export const LandingPage = () => {
               <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">214-729-1484</span>
+                  <span className="text-sm">214-427-8733</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
