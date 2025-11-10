@@ -1,8 +1,24 @@
-import { Helmet } from "react-helmet-async";
+
 import SEO from "./components/SEO";
 import FAQ from "./components/FAQ";
 import { SITE } from "./config.site";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "./SEOHead.jsx";
+import { SITE } from "./config.site";
+import FAQ from "./components/FAQ";
+
+<SEOHead
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map(q => ({
+      "@type": "Question",
+      name: q.q,
+      acceptedAnswer: { "@type": "Answer", text: q.a }
+    })),
+  }}
+/>
 
 
 <SEO
