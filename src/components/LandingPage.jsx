@@ -1,5 +1,4 @@
-import { SITE } from "../config.site";
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -21,136 +20,148 @@ import {
   ArrowRight,
   Snowflake
 } from 'lucide-react';
-import logo from '../assets/logo-tight.png'; // <- your cropped logo in src/assets
+import logo from '../assets/logo-tight.png'; // <<— uses src/assets/logo.png
 
-const FORM_ENDPOINT = 'https://formspree.io/f/xrbarqgz';
+const FORM_ENDPOINT = "https://formspree.io/f/xrbarqgz";
 
 // ---- Mock data ----
 const mockTestimonials = [
   {
     id: 1,
-    name: 'Dr. Sarah Chen',
-    company: 'Dallas Research Lab',
+    name: "Dr. Sarah Chen",
+    company: "Dallas Research Lab",
     rating: 5,
     text:
-      'Minus 80 Scientific saved our research when our -80°C freezer failed. Their emergency response was incredibly fast and professional.',
+      "Minus 80 Scientific saved our research when our -80°C freezer failed. Their emergency response was incredibly fast and professional."
   },
   {
     id: 2,
-    name: 'Michael Rodriguez',
-    company: 'North Texas Biotech',
+    name: "Michael Rodriguez",
+    company: "North Texas Biotech",
     rating: 5,
     text:
-      "Reliable, knowledgeable, and always available. They've been maintaining our cold storage systems for 3 years without any issues.",
+      "Reliable, knowledgeable, and always available. They've been maintaining our cold storage systems for 3 years without any issues."
   },
   {
     id: 3,
-    name: 'Jennifer Walsh',
-    company: 'Metro Medical Center',
+    name: "Jennifer Walsh",
+    company: "Metro Medical Center",
     rating: 5,
     text:
-      'Expert technicians who understand the critical nature of cold storage. Their preventive maintenance program is excellent.',
-  },
+      "Expert technicians who understand the critical nature of cold storage. Their preventive maintenance program is excellent."
+  }
 ];
 
 const mockStats = [
-  { number: '500+', label: 'Systems Serviced' },
-  { number: '24/7', label: 'Emergency Response' },
-  { number: '99.8%', label: 'Uptime Achieved' },
-  { number: '15+', label: 'Years Experience' },
+  { number: "500+", label: "Systems Serviced" },
+  { number: "24/7", label: "Emergency Response" },
+  { number: "99.8%", label: "Uptime Achieved" },
+  { number: "15+", label: "Years Experience" }
 ];
 
 const services = [
   {
     icon: <Thermometer className="w-8 h-8" />,
-    title: 'Ultra-Low Temperature Systems',
+    title: "Ultra-Low Temperature Systems",
     description:
-      'Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.',
-    features: ['Emergency repairs', 'Preventive maintenance', 'Temperature calibration', 'Parts replacement'],
+      "Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.",
+    features: ["Emergency repairs", "Preventive maintenance", "Temperature calibration", "Parts replacement"]
   },
   {
     icon: <Settings className="w-8 h-8" />,
-    title: 'Industrial Cold Storage',
+    title: "Industrial Cold Storage",
     description:
-      'Comprehensive service for large-scale refrigeration systems, walk-in coolers, and industrial freezers.',
-    features: ['System diagnostics', 'Compressor repair', 'Control system updates', 'Energy optimization'],
+      "Comprehensive service for large-scale refrigeration systems, walk-in coolers, and industrial freezers.",
+    features: ["System diagnostics", "Compressor repair", "Control system updates", "Energy optimization"]
   },
   {
     icon: <Shield className="w-8 h-8" />,
-    title: 'Medical & Pharmaceutical',
+    title: "Medical & Pharmaceutical",
     description:
-      'Specialized maintenance for vaccine storage, blood banks, and pharmaceutical cold chain equipment.',
-    features: ['Compliance monitoring', 'Alarm system service', 'Documentation support', 'Validation testing'],
-  },
+      "Specialized maintenance for vaccine storage, blood banks, and pharmaceutical cold chain equipment.",
+    features: ["Compliance monitoring", "Alarm system service", "Documentation support", "Validation testing"]
+  }
 ];
 
 const whyChooseUs = [
   {
     icon: <Clock className="w-6 h-6" />,
-    title: '24/7 Emergency Service',
-    description: 'Round-the-clock availability for critical cold storage emergencies with rapid response times.',
+    title: "24/7 Emergency Service",
+    description: "Round-the-clock availability for critical cold storage emergencies with rapid response times."
   },
   {
     icon: <Thermometer className="w-6 h-6" />,
-    title: 'Ultra-Low Temperature Expertise',
-    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most technicians don't have.",
+    title: "Ultra-Low Temperature Expertise",
+    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most technicians don't have."
   },
   {
     icon: <Zap className="w-6 h-6" />,
-    title: 'Fast Response Times',
-    description: 'We understand that every minute counts when your cold storage system fails.',
+    title: "Fast Response Times",
+    description: "We understand that every minute counts when your cold storage system fails."
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: 'Certified Technicians',
-    description: 'Factory-trained professionals with extensive experience in scientific and medical equipment.',
-  },
+    title: "Certified Technicians",
+    description: "Factory-trained professionals with extensive experience in scientific and medical equipment."
+  }
 ];
 
 export const LandingPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    serviceType: "",
+    message: ""
+  });
+
+  const handleInputChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-5 md:py-6">
-            {/* Brand with large logo */}
-            <a
-              href="/"
-              aria-label="Minus 80 Scientific — Home"
-              className="flex items-center gap-3"
-            >
-              <img
-                src={logo}
-                alt="Minus 80 Scientific logo"
-                className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
-                fetchPriority="high"
-              />
-            </a>
+<header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center py-5">
+      {/* Brand with larger logo */}
+      <a href="/" aria-label="Minus 80 Scientific — Home" className="flex items-center space-x-3">
+        <img
+          src={logo}                     // imported from '../assets/logo.png'
+          alt="Minus 80 Scientific logo"
+          className="h-16 md:h-24 lg:h-28 w-auto shrink-0"
+        />
+      </a>
 
-            <div className="hidden md:flex items-center space-x-6">
-              <a href="#services" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Services</a>
-              <a href="#about" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">About</a>
-              <a href="#contact" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Contact</a>
-              <a href="tel:+12144278733">
-                <Button className="bg-[#1B8BB4] hover:bg-[#156A89] text-white">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <div className="hidden md:flex items-center space-x-6">
+        <a href="#services" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">
+          Services
+        </a>
+        <a href="#about" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">
+          About
+        </a>
+        <a href="#contact" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">
+          Contact
+        </a>
+        <a href="tel:+12147291484">
+          <Button className="bg-[#1B8BB4] hover:bg-[#156A89] text-white">
+            <Phone className="w-4 h-4 mr-2" />
+            Call Now
+          </Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#1B8BB4] via-[#2A9FC4] to-[#1B8BB4] text-white py-24 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-20"
-        />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left copy */}
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
@@ -170,19 +181,19 @@ export const LandingPage = () => {
                 <Button
                   size="lg"
                   className="bg-white text-[#1B8BB4] hover:bg-gray-50 text-lg px-8 py-4 h-auto"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Get Emergency Service
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <a href="tel:+12144278733">
+                <a href="tel:+12147291484">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-[#1B8BB4] text-lg px-8 py-4 h-auto"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    214-427-8733
+                    214-729-1484
                   </Button>
                 </a>
               </div>
@@ -197,15 +208,13 @@ export const LandingPage = () => {
               </div>
             </div>
 
-            {/* Right: large logo card */}
             <div className="relative">
               <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 p-8 flex items-center justify-center">
-                <img
-                  src={logo}
-                  alt="Minus 80 Scientific logo"
-                  className="h-40 sm:h-48 md:h-56 lg:h-64 w-auto drop-shadow-lg"
-                  fetchPriority="high"
-                />
+                <div className="text-center space-y-4">
+                  <Snowflake className="w-24 h-24 text-white mx-auto animate-pulse" />
+                  <p className="text-white/80">Ultra-Low Temperature Systems</p>
+                  <p className="text-4xl font-bold text-white">-80°C</p>
+                </div>
               </div>
             </div>
           </div>
@@ -266,7 +275,7 @@ export const LandingPage = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Thermometer className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>
@@ -278,7 +287,7 @@ export const LandingPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>
@@ -290,7 +299,7 @@ export const LandingPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>
@@ -314,7 +323,7 @@ export const LandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5" />
-                      <span>214-427-8733</span>
+                      <span>214-729-1484</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5" />
@@ -413,7 +422,7 @@ export const LandingPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">24/7 Emergency Hotline</div>
-                    <div className="text-cyan-200">214-427-8733</div>
+                    <div className="text-cyan-200">214-729-1484</div>
                   </div>
                 </div>
 
@@ -447,12 +456,11 @@ export const LandingPage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                {/* Static POST to Formspree */}
-                <form action={FORM_ENDPOINT} method="POST" className="space-y-4" acceptCharset="UTF-8">
-                  {/* nicer subject + redirect + honeypot */}
-                  <input type="hidden" name="_subject" value="New Service Request — Minus 80 Scientific" />
+                {/* Plain HTML POST to Formspree */}
+                <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
+                  <input type="hidden" name="_subject" value="New inquiry — Minus 80 Scientific" />
                   <input type="hidden" name="_next" value="/thank-you.html" />
-                  <input type="text" name="_gotcha" className="hidden" autoComplete="off" tabIndex={-1} />
+                  <input type="text" name="_gotcha" className="hidden" />
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -463,6 +471,7 @@ export const LandingPage = () => {
                         required
                         className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                         placeholder="Your full name"
+                        onChange={handleInputChange}
                       />
                     </div>
                     <div>
@@ -472,6 +481,7 @@ export const LandingPage = () => {
                         name="company"
                         className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                         placeholder="Company name"
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -486,6 +496,7 @@ export const LandingPage = () => {
                         required
                         className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                         placeholder="your.email@company.com"
+                        onChange={handleInputChange}
                       />
                     </div>
                     <div>
@@ -496,7 +507,8 @@ export const LandingPage = () => {
                         type="tel"
                         required
                         className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-                        placeholder="(214) 427-8733"
+                        placeholder="(214) 123-4567"
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -508,6 +520,7 @@ export const LandingPage = () => {
                       name="serviceType"
                       className="w-full px-3 py-2 bg-white/20 border border-white/30 rounded-md text-white"
                       defaultValue=""
+                      onChange={handleInputChange}
                     >
                       <option value="" className="text-gray-900">Select service type</option>
                       <option value="emergency" className="text-gray-900">Emergency Repair</option>
@@ -526,6 +539,7 @@ export const LandingPage = () => {
                       rows={4}
                       className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                       placeholder="Describe your cold storage system and the issue you're experiencing..."
+                      onChange={handleInputChange}
                     />
                   </div>
 
@@ -561,7 +575,7 @@ export const LandingPage = () => {
               <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">214-427-8733</span>
+                  <span className="text-sm">214-729-1484</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -608,4 +622,5 @@ export const LandingPage = () => {
   );
 };
 
+// export both ways to avoid import mismatch
 export default LandingPage;
