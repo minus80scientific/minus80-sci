@@ -2,15 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1B8BB4" />
+    <title>Minus 80 Scientific</title>
+
+    <!-- Human-visible SEO -->
     <meta
       name="description"
-      content="Minus 80 Scientific — Dallas cold storage experts. Ultra-low (-80°C) freezer repair, preventive maintenance, and 24/7 emergency service."
+      content="Minus 80 Scientific — Dallas cold storage experts. Ultra-low (−80°C) freezer repair, preventive maintenance, and 24/7 emergency service."
     />
-    <title>Minus 80 Scientific</title>
-    <!-- Optional: if you add a favicon later, keep this line and drop a favicon.ico in /public -->
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.minus80scientific.com/" />
+
+    <!-- JSON-LD (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Minus 80 Scientific",
+      "url": "https://www.minus80scientific.com/",
+      "telephone": "+1-214-427-8733",
+      "description": "Ultra-low (−80°C) freezer repair, preventive maintenance, and emergency service.",
+      "areaServed": "Dallas–Fort Worth",
+      "serviceType": ["Ultra-low freezer repair", "Preventive maintenance", "Emergency repair"],
+      "image": "%PUBLIC_URL%/logo192.png"
+    }
+    </script>
+
+    <!--
+      CRA will inject hashed CSS/JS into the built index.html.
+      Do not add static <script> tags here; use React code in /src.
+    -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

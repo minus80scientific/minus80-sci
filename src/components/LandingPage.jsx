@@ -266,7 +266,7 @@ export const LandingPage = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
                     <Thermometer className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>
@@ -278,7 +278,7 @@ export const LandingPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
                     <Clock className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>
@@ -290,7 +290,7 @@ export const LandingPage = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#1B8BB4]/10 rounded-lg flex items-center justify-center flex-shrzinc-0">
                     <Shield className="w-6 h-6 text-[#1B8BB4]" />
                   </div>
                   <div>

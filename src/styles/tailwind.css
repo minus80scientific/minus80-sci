@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+/* Map your old ink-* names to Tailwind v4 zinc-* utilities */
+@layer utilities {
+  .text-ink-900 { @apply text-zinc-900; }
+  .text-ink-800 { @apply text-zinc-800; }
+  .text-ink-700 { @apply text-zinc-700; }
+  .bg-ink-900   { @apply bg-zinc-900; }
+  .bg-ink-800   { @apply bg-zinc-800; }
+  .bg-ink-700   { @apply bg-zinc-700; }
+  .border-ink-200 { @apply border-zinc-200; }
+  /* add any other ink-* you use */
+}

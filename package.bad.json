@@ -1,0 +1,17 @@
+powershell -Command ^
+  "$json=@'
+{
+  ""name"": ""minus80-sci"",
+  ""version"": ""1.0.0"",
+  ""private"": true,
+  ""description"": """",
+  ""main"": ""index.js"",
+  ""scripts"": {
+    ""build:css"": ""tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/tailwind.css --minify"",
+    ""watch:css"": ""tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/tailwind.css --watch""
+  },
+  ""keywords"": [],
+  ""author"": """",
+  ""license"": ""MIT""
+}
+'@; Set-Content -Path package.json -Value $json -Encoding UTF8"
