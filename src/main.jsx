@@ -128,29 +128,42 @@ function Contact() {
 
       <div className="mt-8 grid gap-8 md:grid-cols-2">
         <form
-          className="space-y-4"
-          method="POST"
-          action="https://formspree.io/f/your-id-here"   /* Replace with your Formspree/endpoint */
-        >
-          <div>
-            <label className="block text-sm font-medium">Name</label>
-            <input name="name" required className="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Email</label>
-            <input type="email" name="email" required className="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Phone</label>
-            <input name="phone" className="mt-1 w-full rounded-xl border px-3 py-2" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">How can we help?</label>
-            <textarea name="message" rows="5" required className="mt-1 w-full rounded-xl border px-3 py-2"></textarea>
-          </div>
-          <button className="rounded-xl px-4 py-2 bg-black text-white hover:opacity-90">Send</button>
-          <p className="text-xs text-neutral-500">Or email <a className="underline" href="mailto:service@minus80scientific.com">service@minus80scientific.com</a></p>
-        </form>
+  className="space-y-4"
+  method="POST"
+  action="https://formspree.io/f/mwpnjnrb"
+>
+  {/* optional: sets email subject on the notification you receive */}
+  <input type="hidden" name="_subject" value="Minus80 Service Request" />
+  {/* optional: simple honeypot (spam trap) */}
+  <input type="text" name="_gotcha" className="hidden" tabIndex="-1" autoComplete="off" />
+
+  <div>
+    <label className="block text-sm font-medium">Name</label>
+    <input name="name" required className="mt-1 w-full rounded-xl border px-3 py-2" />
+  </div>
+  <div>
+    <label className="block text-sm font-medium">Email</label>
+    <input type="email" name="email" required className="mt-1 w-full rounded-xl border px-3 py-2" />
+  </div>
+  <div>
+    <label className="block text-sm font-medium">Phone</label>
+    <input name="phone" className="mt-1 w-full rounded-xl border px-3 py-2" />
+  </div>
+  <div>
+    <label className="block text-sm font-medium">How can we help?</label>
+    <textarea name="message" rows="5" required className="mt-1 w-full rounded-xl border px-3 py-2"></textarea>
+  </div>
+
+  {/* optional: redirect to a Thank You page after submit
+      (create a /thanks route if you want this behavior) */}
+  {/* <input type="hidden" name="_redirect" value="https://www.minus80scientific.com/thanks" /> */}
+
+  <button className="rounded-xl px-4 py-2 bg-black text-white hover:opacity-90">Send</button>
+  <p className="text-xs text-neutral-500">
+    Or email <a className="underline" href="mailto:service@minus80scientific.com">service@minus80scientific.com</a>
+  </p>
+</form>
+
 
         <div className="space-y-3">
           <InfoRow label="Phone" value={<a className="underline" href="tel:12144278733">(214) 427-8733</a>} />
