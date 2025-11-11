@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -32,7 +32,7 @@ const mockTestimonials = [
     company: 'Dallas Research Lab',
     rating: 5,
     text:
-      'Minus 80 Scientific saved our research when our -80°C freezer failed. Their emergency response was incredibly fast and professional.',
+      'Minus 80 Scientific saved our research when our -80Â°C freezer failed. Their emergency response was incredibly fast and professional.',
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const services = [
     icon: <Thermometer className="w-8 h-8" />,
     title: 'Ultra-Low Temperature Systems',
     description:
-      'Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.',
+      'Expert repair and maintenance of -80Â°C freezers, cryogenic systems, and specialized laboratory equipment.',
     features: ['Emergency repairs', 'Preventive maintenance', 'Temperature calibration', 'Parts replacement'],
   },
   {
@@ -92,7 +92,7 @@ const whyChooseUs = [
   {
     icon: <Thermometer className="w-6 h-6" />,
     title: 'Ultra-Low Temperature Expertise',
-    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most technicians don't have.",
+    description: "Specialized knowledge in -80Â°C systems and cryogenic equipment that most technicians don't have.",
   },
   {
     icon: <Zap className="w-6 h-6" />,
@@ -116,7 +116,7 @@ export const LandingPage = () => {
             {/* Brand with large logo */}
             <a
               href="/"
-              aria-label="Minus 80 Scientific — Home"
+              aria-label="Minus 80 Scientific â€” Home"
               className="flex items-center gap-3"
             >
               <img
@@ -131,7 +131,7 @@ export const LandingPage = () => {
               <a href="#services" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Services</a>
               <a href="#about" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">About</a>
               <a href="#contact" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Contact</a>
-              <a href="tel:+12147291484">
+              <a href="tel:+12144278733">
                 <Button className="bg-[#1B8BB4] hover:bg-[#156A89] text-white">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
@@ -153,7 +153,7 @@ export const LandingPage = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
-                  Dallas, Texas • 24/7 Emergency Service
+                  Dallas, Texas â€¢ 24/7 Emergency Service
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   Expert Cold Storage
@@ -174,14 +174,14 @@ export const LandingPage = () => {
                   Get Emergency Service
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <a href="tel:+12147291484">
+                <a href="tel:+12144278733">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-[#1B8BB4] text-lg px-8 py-4 h-auto"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    214-729-1484
+                    \(214\)\ 427-8733
                   </Button>
                 </a>
               </div>
@@ -271,7 +271,7 @@ export const LandingPage = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Ultra-Low Temperature Specialists</h3>
                     <p className="text-gray-600">
-                      Expert knowledge in -80°C systems, cryogenic equipment, and specialized laboratory freezers.
+                      Expert knowledge in -80Â°C systems, cryogenic equipment, and specialized laboratory freezers.
                     </p>
                   </div>
                 </div>
@@ -313,7 +313,7 @@ export const LandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5" />
-                      <span>214-729-1484</span>
+                      <span>\(214\)\ 427-8733</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5" />
@@ -412,7 +412,7 @@ export const LandingPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">24/7 Emergency Hotline</div>
-                    <div className="text-cyan-200">214-729-1484</div>
+                    <div className="text-cyan-200">\(214\)\ 427-8733</div>
                   </div>
                 </div>
 
@@ -449,7 +449,7 @@ export const LandingPage = () => {
                 {/* Static POST to Formspree */}
                 <form action={FORM_ENDPOINT} method="POST" className="space-y-4" acceptCharset="UTF-8">
                   {/* nicer subject + redirect + honeypot */}
-                  <input type="hidden" name="_subject" value="New Service Request — Minus 80 Scientific" />
+                  <input type="hidden" name="_subject" value="New Service Request â€” Minus 80 Scientific" />
                   <input type="hidden" name="_next" value="/thank-you.html" />
                   <input type="text" name="_gotcha" className="hidden" autoComplete="off" tabIndex={-1} />
 
@@ -560,7 +560,7 @@ export const LandingPage = () => {
               <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">214-729-1484</span>
+                  <span className="text-sm">\(214\)\ 427-8733</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -595,7 +595,7 @@ export const LandingPage = () => {
           <Separator className="bg-gray-800 my-8" />
 
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <div>© {new Date().getFullYear()} Minus 80 Scientific. All rights reserved.</div>
+            <div>Â© {new Date().getFullYear()} Minus 80 Scientific. All rights reserved.</div>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <span>Licensed &amp; Insured</span>
               <span>Factory Trained Technicians</span>
@@ -608,3 +608,4 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
+
