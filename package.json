@@ -8,7 +8,7 @@
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./src/styles/tailwind.css -o ./assets/tailwind.css --watch",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir build",
     "preview": "vite preview"
   },
   "keywords": [],
