@@ -1,9 +1,9 @@
-// Mock data for Minus80 Scientific landing page
+﻿// Mock data for Minus80 Scientific landing page
 
 export const mockContactInfo = {
   company: "Minus80 Scientific",
   address: "3730 Dilido Rd, Dallas, Texas 75228",
-  phone: "214-729-1484",
+  phone: "\(214\)\ 427-8733",
   email: "info@minus80scientific.com",
   emergencyAvailable: true,
   serviceArea: "Dallas, Texas & Surrounding Areas"
@@ -15,7 +15,7 @@ export const mockServices = [
     category: "Ultra-Low Temperature Systems",
     icon: "thermometer",
     title: "Laboratory Freezer Repair",
-    description: "Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.",
+    description: "Expert repair and maintenance of -80Â°C freezers, cryogenic systems, and specialized laboratory equipment.",
     features: [
       "Emergency repairs within 2-4 hours",
       "Preventive maintenance programs",
@@ -64,7 +64,7 @@ export const mockTestimonials = [
     position: "Research Director",
     company: "BioTech Research Labs",
     rating: 5,
-    text: "Minus80 Scientific saved our research when our -80°C freezer failed over the weekend. Their emergency response team was on-site within 2 hours and had us back online before any samples were compromised. Incredible service!",
+    text: "Minus80 Scientific saved our research when our -80Â°C freezer failed over the weekend. Their emergency response team was on-site within 2 hours and had us back online before any samples were compromised. Incredible service!",
     serviceUsed: "Emergency Repair",
     verified: true
   },
@@ -116,7 +116,7 @@ export const mockWhyChooseUs = [
     id: 2,
     icon: "thermometer",
     title: "Ultra-Low Temperature Expertise",
-    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most general HVAC technicians don't possess.",
+    description: "Specialized knowledge in -80Â°C systems and cryogenic equipment that most general HVAC technicians don't possess.",
     benefits: [
       "Factory training certifications",
       "Specialized diagnostic equipment",
@@ -154,7 +154,7 @@ export const mockFormSubmission = {
   success: true,
   message: "Thank you for your inquiry! We will contact you within 2 hours during business hours, or first thing the next business day if submitted after hours.",
   responseTime: "2 hours",
-  emergencyContact: "214-729-1484"
+  emergencyContact: "\(214\)\ 427-8733"
 };
 
 // Mock form validation
