@@ -181,7 +181,7 @@ export const LandingPage = () => {
                     className="border-white text-white hover:bg-white hover:text-[#1B8BB4] text-lg px-8 py-4 h-auto"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    \(214\) 427-8733
+                    (214) 427-8733
                   </Button>
                 </a>
               </div>
@@ -313,7 +313,7 @@ export const LandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5" />
-                      <span>\(214\) 427-8733</span>
+                      <span>(214) 427-8733</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5" />
@@ -412,7 +412,7 @@ export const LandingPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">24/7 Emergency Hotline</div>
-                    <div className="text-cyan-200">\(214\) 427-8733</div>
+                    <div className="text-cyan-200">(214) 427-8733</div>
                   </div>
                 </div>
 
@@ -560,7 +560,7 @@ export const LandingPage = () => {
               <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">\(214\) 427-8733</span>
+                  <span className="text-sm">(214) 427-8733</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -608,6 +608,7 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
+
 
 
 

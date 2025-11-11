@@ -3,7 +3,7 @@
 export const mockContactInfo = {
   company: "Minus80 Scientific",
   address: "3730 Dilido Rd, Dallas, Texas 75228",
-  phone: "\(214\) 427-8733",
+  phone: "(214) 427-8733",
   email: "info@minus80scientific.com",
   emergencyAvailable: true,
   serviceArea: "Dallas, Texas & Surrounding Areas"
@@ -154,7 +154,7 @@ export const mockFormSubmission = {
   success: true,
   message: "Thank you for your inquiry! We will contact you within 2 hours during business hours, or first thing the next business day if submitted after hours.",
   responseTime: "2 hours",
-  emergencyContact: "\(214\) 427-8733"
+  emergencyContact: "(214) 427-8733"
 };
 
 // Mock form validation
@@ -192,6 +192,7 @@ export default {
   mockFormSubmission,
   validateContactForm
 };
+
 
 
 
