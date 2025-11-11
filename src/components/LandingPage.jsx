@@ -32,7 +32,7 @@ const mockTestimonials = [
     company: 'Dallas Research Lab',
     rating: 5,
     text:
-      'Minus 80 Scientific saved our research when our -80Â°C freezer failed. Their emergency response was incredibly fast and professional.',
+      'Minus 80 Scientific saved our research when our -80°C freezer failed. Their emergency response was incredibly fast and professional.',
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const services = [
     icon: <Thermometer className="w-8 h-8" />,
     title: 'Ultra-Low Temperature Systems',
     description:
-      'Expert repair and maintenance of -80Â°C freezers, cryogenic systems, and specialized laboratory equipment.',
+      'Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.',
     features: ['Emergency repairs', 'Preventive maintenance', 'Temperature calibration', 'Parts replacement'],
   },
   {
@@ -92,7 +92,7 @@ const whyChooseUs = [
   {
     icon: <Thermometer className="w-6 h-6" />,
     title: 'Ultra-Low Temperature Expertise',
-    description: "Specialized knowledge in -80Â°C systems and cryogenic equipment that most technicians don't have.",
+    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most technicians don't have.",
   },
   {
     icon: <Zap className="w-6 h-6" />,
@@ -116,7 +116,7 @@ export const LandingPage = () => {
             {/* Brand with large logo */}
             <a
               href="/"
-              aria-label="Minus 80 Scientific â€” Home"
+              aria-label="Minus 80 Scientific ” Home"
               className="flex items-center gap-3"
             >
               <img
@@ -153,7 +153,7 @@ export const LandingPage = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
-                  Dallas, Texas â€¢ 24/7 Emergency Service
+                  Dallas, Texas • 24/7 Emergency Service
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                   Expert Cold Storage
@@ -271,7 +271,7 @@ export const LandingPage = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Ultra-Low Temperature Specialists</h3>
                     <p className="text-gray-600">
-                      Expert knowledge in -80Â°C systems, cryogenic equipment, and specialized laboratory freezers.
+                      Expert knowledge in -80°C systems, cryogenic equipment, and specialized laboratory freezers.
                     </p>
                   </div>
                 </div>
@@ -449,7 +449,7 @@ export const LandingPage = () => {
                 {/* Static POST to Formspree */}
                 <form action={FORM_ENDPOINT} method="POST" className="space-y-4" acceptCharset="UTF-8">
                   {/* nicer subject + redirect + honeypot */}
-                  <input type="hidden" name="_subject" value="New Service Request â€” Minus 80 Scientific" />
+                  <input type="hidden" name="_subject" value="New Service Request ” Minus 80 Scientific" />
                   <input type="hidden" name="_next" value="/thank-you.html" />
                   <input type="text" name="_gotcha" className="hidden" autoComplete="off" tabIndex={-1} />
 
@@ -608,4 +608,5 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
+
 

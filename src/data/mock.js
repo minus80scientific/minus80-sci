@@ -15,7 +15,7 @@ export const mockServices = [
     category: "Ultra-Low Temperature Systems",
     icon: "thermometer",
     title: "Laboratory Freezer Repair",
-    description: "Expert repair and maintenance of -80Â°C freezers, cryogenic systems, and specialized laboratory equipment.",
+    description: "Expert repair and maintenance of -80°C freezers, cryogenic systems, and specialized laboratory equipment.",
     features: [
       "Emergency repairs within 2-4 hours",
       "Preventive maintenance programs",
@@ -64,7 +64,7 @@ export const mockTestimonials = [
     position: "Research Director",
     company: "BioTech Research Labs",
     rating: 5,
-    text: "Minus80 Scientific saved our research when our -80Â°C freezer failed over the weekend. Their emergency response team was on-site within 2 hours and had us back online before any samples were compromised. Incredible service!",
+    text: "Minus80 Scientific saved our research when our -80°C freezer failed over the weekend. Their emergency response team was on-site within 2 hours and had us back online before any samples were compromised. Incredible service!",
     serviceUsed: "Emergency Repair",
     verified: true
   },
@@ -116,7 +116,7 @@ export const mockWhyChooseUs = [
     id: 2,
     icon: "thermometer",
     title: "Ultra-Low Temperature Expertise",
-    description: "Specialized knowledge in -80Â°C systems and cryogenic equipment that most general HVAC technicians don't possess.",
+    description: "Specialized knowledge in -80°C systems and cryogenic equipment that most general HVAC technicians don't possess.",
     benefits: [
       "Factory training certifications",
       "Specialized diagnostic equipment",
@@ -192,3 +192,4 @@ export default {
   mockFormSubmission,
   validateContactForm
 };
+
