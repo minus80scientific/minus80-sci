@@ -1,4 +1,4 @@
-﻿// Mock data for Minus80 Scientific landing page
+﻿﻿// Mock data for Minus80 Scientific landing page
 
 export const mockContactInfo = {
   company: "Minus80 Scientific",
@@ -192,4 +192,5 @@ export default {
   mockFormSubmission,
   validateContactForm
 };
+
 

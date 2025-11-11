@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿﻿import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -595,7 +595,7 @@ export const LandingPage = () => {
           <Separator className="bg-gray-800 my-8" />
 
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <div>Â© {new Date().getFullYear()} Minus 80 Scientific. All rights reserved.</div>
+            <div>© {new Date().getFullYear()} Minus 80 Scientific. All rights reserved.</div>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <span>Licensed &amp; Insured</span>
               <span>Factory Trained Technicians</span>
@@ -608,5 +608,7 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
+
+
 
 
