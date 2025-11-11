@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+﻿﻿import React from 'react';
+>>>>>>> phone-swap-prod
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Input } from './ui/input';
@@ -123,6 +127,7 @@ export const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
+<<<<<<< HEAD
 <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex justify-between items-center py-5">
@@ -156,6 +161,39 @@ export const LandingPage = () => {
   </div>
 </header>
 
+=======
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-5 md:py-6">
+            {/* Brand with large logo */}
+            <a
+              href="/"
+              aria-label="Minus 80 Scientific ” Home"
+              className="flex items-center gap-3"
+            >
+              <img
+                src={logo}
+                alt="Minus 80 Scientific logo"
+                className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
+                fetchPriority="high"
+              />
+            </a>
+
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#services" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Services</a>
+              <a href="#about" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">About</a>
+              <a href="#contact" className="text-gray-700 hover:text-[#1B8BB4] transition-colors">Contact</a>
+              <a href="tel:+12144278733">
+                <Button className="bg-[#1B8BB4] hover:bg-[#156A89] text-white">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+>>>>>>> phone-swap-prod
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#1B8BB4] via-[#2A9FC4] to-[#1B8BB4] text-white py-24 overflow-hidden">
@@ -186,14 +224,14 @@ export const LandingPage = () => {
                   Get Emergency Service
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <a href="tel:+12147291484">
+                <a href="tel:+12144278733">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-white hover:text-[#1B8BB4] text-lg px-8 py-4 h-auto"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    214-729-1484
+                    (214) 427-8733
                   </Button>
                 </a>
               </div>
@@ -323,7 +361,7 @@ export const LandingPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5" />
-                      <span>214-729-1484</span>
+                      <span>(214) 427-8733</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5" />
@@ -422,7 +460,7 @@ export const LandingPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">24/7 Emergency Hotline</div>
-                    <div className="text-cyan-200">214-729-1484</div>
+                    <div className="text-cyan-200">(214) 427-8733</div>
                   </div>
                 </div>
 
@@ -456,9 +494,16 @@ export const LandingPage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 {/* Plain HTML POST to Formspree */}
                 <form action={FORM_ENDPOINT} method="POST" className="space-y-4">
                   <input type="hidden" name="_subject" value="New inquiry — Minus 80 Scientific" />
+=======
+                {/* Static POST to Formspree */}
+                <form action={FORM_ENDPOINT} method="POST" className="space-y-4" acceptCharset="UTF-8">
+                  {/* nicer subject + redirect + honeypot */}
+                  <input type="hidden" name="_subject" value="New Service Request ” Minus 80 Scientific" />
+>>>>>>> phone-swap-prod
                   <input type="hidden" name="_next" value="/thank-you.html" />
                   <input type="text" name="_gotcha" className="hidden" />
 
@@ -575,7 +620,7 @@ export const LandingPage = () => {
               <div className="flex space-x-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">214-729-1484</span>
+                  <span className="text-sm">(214) 427-8733</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -624,3 +669,9 @@ export const LandingPage = () => {
 
 // export both ways to avoid import mismatch
 export default LandingPage;
+
+
+
+
+
+

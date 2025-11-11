@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> phone-swap-prod
 
 /* Tailwind v4 theme tokens so utilities like bg-background, text-foreground,
    and border-border work. Adjust to your palette if you like. */
@@ -67,3 +73,4 @@
 
   --color-ring: var(--zinc-300);
 }
+
