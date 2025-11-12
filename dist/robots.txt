@@ -1,3 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
+
 Sitemap: https://www.minus80scientific.com/sitemap.xml
