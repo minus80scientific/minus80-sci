@@ -1,3 +1,69 @@
-﻿@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Tailwind v4 theme tokens so utilities like bg-background, text-foreground,
+   and border-border work. Adjust to your palette if you like. */
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: var(--zinc-200);
+  --color-secondary-foreground: var(--zinc-900);
+
+  --color-muted: var(--zinc-100);
+  --color-muted-foreground: var(--zinc-600);
+
+  --color-accent: var(--zinc-100);
+  --color-accent-foreground: var(--zinc-900);
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  /* 👇 These two are the important ones for your error */
+  --color-border: var(--zinc-200);
+  --color-input: var(--zinc-200);
+
+  --color-ring: var(--zinc-800);
+}
+
+/* Optional: dark theme variant if you use .dark on <html> or <body> */
+@variant dark (&:where(.dark, [data-theme="dark"]));
+
+@theme .dark {
+  --color-background: #0a0a0a;
+  --color-foreground: #fafafa;
+
+  --color-card: #0a0a0a;
+  --color-card-foreground: #fafafa;
+
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #fafafa;
+
+  --color-primary: #ffffff;
+  --color-primary-foreground: #000000;
+
+  --color-secondary: var(--zinc-800);
+  --color-secondary-foreground: #fafafa;
+
+  --color-muted: var(--zinc-800);
+  --color-muted-foreground: var(--zinc-400);
+
+  --color-accent: var(--zinc-800);
+  --color-accent-foreground: #fafafa;
+
+  --color-destructive: #7f1d1d;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: var(--zinc-800);
+  --color-input: var(--zinc-800);
+
+  --color-ring: var(--zinc-300);
+}
